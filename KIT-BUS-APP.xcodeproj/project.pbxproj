@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D500D05B2175BDAB0016288E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D05A2175BDAB0016288E /* AppDelegate.swift */; };
+		D500D05D2175BDAB0016288E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D05C2175BDAB0016288E /* ViewController.swift */; };
+		D500D0602175BDAB0016288E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D500D05E2175BDAB0016288E /* Main.storyboard */; };
+		D500D0622175BDAD0016288E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D500D0612175BDAD0016288E /* Assets.xcassets */; };
+		D500D0652175BDAD0016288E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D500D0632175BDAD0016288E /* LaunchScreen.storyboard */; };
+		D500D0702175BDAD0016288E /* KIT_BUS_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D06F2175BDAD0016288E /* KIT_BUS_APPTests.swift */; };
+		D500D07B2175BDAD0016288E /* KIT_BUS_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D07A2175BDAD0016288E /* KIT_BUS_APPUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D500D06C2175BDAD0016288E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D500D04F2175BDAB0016288E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D500D0562175BDAB0016288E;
+			remoteInfo = "KIT-BUS-APP";
+		};
+		D500D0772175BDAD0016288E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D500D04F2175BDAB0016288E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D500D0562175BDAB0016288E;
+			remoteInfo = "KIT-BUS-APP";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D500D0572175BDAB0016288E /* KIT-BUS-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KIT-BUS-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D500D05A2175BDAB0016288E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D500D05C2175BDAB0016288E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D500D05F2175BDAB0016288E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D500D0612175BDAD0016288E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D500D0642175BDAD0016288E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D500D0662175BDAD0016288E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D500D06B2175BDAD0016288E /* KIT-BUS-APPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KIT-BUS-APPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D500D06F2175BDAD0016288E /* KIT_BUS_APPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIT_BUS_APPTests.swift; sourceTree = "<group>"; };
+		D500D0712175BDAD0016288E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D500D0762175BDAD0016288E /* KIT-BUS-APPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KIT-BUS-APPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D500D07A2175BDAD0016288E /* KIT_BUS_APPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIT_BUS_APPUITests.swift; sourceTree = "<group>"; };
+		D500D07C2175BDAD0016288E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D500D0542175BDAB0016288E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500D0682175BDAD0016288E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500D0732175BDAD0016288E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D500D04E2175BDAB0016288E = {
+			isa = PBXGroup;
+			children = (
+				D500D0592175BDAB0016288E /* KIT-BUS-APP */,
+				D500D06E2175BDAD0016288E /* KIT-BUS-APPTests */,
+				D500D0792175BDAD0016288E /* KIT-BUS-APPUITests */,
+				D500D0582175BDAB0016288E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D500D0582175BDAB0016288E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D500D0572175BDAB0016288E /* KIT-BUS-APP.app */,
+				D500D06B2175BDAD0016288E /* KIT-BUS-APPTests.xctest */,
+				D500D0762175BDAD0016288E /* KIT-BUS-APPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D500D0592175BDAB0016288E /* KIT-BUS-APP */ = {
+			isa = PBXGroup;
+			children = (
+				D500D05A2175BDAB0016288E /* AppDelegate.swift */,
+				D500D05C2175BDAB0016288E /* ViewController.swift */,
+				D500D05E2175BDAB0016288E /* Main.storyboard */,
+				D500D0612175BDAD0016288E /* Assets.xcassets */,
+				D500D0632175BDAD0016288E /* LaunchScreen.storyboard */,
+				D500D0662175BDAD0016288E /* Info.plist */,
+			);
+			path = "KIT-BUS-APP";
+			sourceTree = "<group>";
+		};
+		D500D06E2175BDAD0016288E /* KIT-BUS-APPTests */ = {
+			isa = PBXGroup;
+			children = (
+				D500D06F2175BDAD0016288E /* KIT_BUS_APPTests.swift */,
+				D500D0712175BDAD0016288E /* Info.plist */,
+			);
+			path = "KIT-BUS-APPTests";
+			sourceTree = "<group>";
+		};
+		D500D0792175BDAD0016288E /* KIT-BUS-APPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D500D07A2175BDAD0016288E /* KIT_BUS_APPUITests.swift */,
+				D500D07C2175BDAD0016288E /* Info.plist */,
+			);
+			path = "KIT-BUS-APPUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D500D0562175BDAB0016288E /* KIT-BUS-APP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D500D07F2175BDAD0016288E /* Build configuration list for PBXNativeTarget "KIT-BUS-APP" */;
+			buildPhases = (
+				D500D0532175BDAB0016288E /* Sources */,
+				D500D0542175BDAB0016288E /* Frameworks */,
+				D500D0552175BDAB0016288E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KIT-BUS-APP";
+			productName = "KIT-BUS-APP";
+			productReference = D500D0572175BDAB0016288E /* KIT-BUS-APP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D500D06A2175BDAD0016288E /* KIT-BUS-APPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D500D0822175BDAD0016288E /* Build configuration list for PBXNativeTarget "KIT-BUS-APPTests" */;
+			buildPhases = (
+				D500D0672175BDAD0016288E /* Sources */,
+				D500D0682175BDAD0016288E /* Frameworks */,
+				D500D0692175BDAD0016288E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D500D06D2175BDAD0016288E /* PBXTargetDependency */,
+			);
+			name = "KIT-BUS-APPTests";
+			productName = "KIT-BUS-APPTests";
+			productReference = D500D06B2175BDAD0016288E /* KIT-BUS-APPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D500D0752175BDAD0016288E /* KIT-BUS-APPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D500D0852175BDAD0016288E /* Build configuration list for PBXNativeTarget "KIT-BUS-APPUITests" */;
+			buildPhases = (
+				D500D0722175BDAD0016288E /* Sources */,
+				D500D0732175BDAD0016288E /* Frameworks */,
+				D500D0742175BDAD0016288E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D500D0782175BDAD0016288E /* PBXTargetDependency */,
+			);
+			name = "KIT-BUS-APPUITests";
+			productName = "KIT-BUS-APPUITests";
+			productReference = D500D0762175BDAD0016288E /* KIT-BUS-APPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D500D04F2175BDAB0016288E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = yodaaa;
+				TargetAttributes = {
+					D500D0562175BDAB0016288E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					D500D06A2175BDAD0016288E = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = D500D0562175BDAB0016288E;
+					};
+					D500D0752175BDAD0016288E = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = D500D0562175BDAB0016288E;
+					};
+				};
+			};
+			buildConfigurationList = D500D0522175BDAB0016288E /* Build configuration list for PBXProject "KIT-BUS-APP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D500D04E2175BDAB0016288E;
+			productRefGroup = D500D0582175BDAB0016288E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D500D0562175BDAB0016288E /* KIT-BUS-APP */,
+				D500D06A2175BDAD0016288E /* KIT-BUS-APPTests */,
+				D500D0752175BDAD0016288E /* KIT-BUS-APPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D500D0552175BDAB0016288E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D500D0652175BDAD0016288E /* LaunchScreen.storyboard in Resources */,
+				D500D0622175BDAD0016288E /* Assets.xcassets in Resources */,
+				D500D0602175BDAB0016288E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500D0692175BDAD0016288E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500D0742175BDAD0016288E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D500D0532175BDAB0016288E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D500D05D2175BDAB0016288E /* ViewController.swift in Sources */,
+				D500D05B2175BDAB0016288E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500D0672175BDAD0016288E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D500D0702175BDAD0016288E /* KIT_BUS_APPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500D0722175BDAD0016288E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D500D07B2175BDAD0016288E /* KIT_BUS_APPUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D500D06D2175BDAD0016288E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D500D0562175BDAB0016288E /* KIT-BUS-APP */;
+			targetProxy = D500D06C2175BDAD0016288E /* PBXContainerItemProxy */;
+		};
+		D500D0782175BDAD0016288E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D500D0562175BDAB0016288E /* KIT-BUS-APP */;
+			targetProxy = D500D0772175BDAD0016288E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D500D05E2175BDAB0016288E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D500D05F2175BDAB0016288E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D500D0632175BDAD0016288E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D500D0642175BDAD0016288E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D500D07D2175BDAD0016288E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D500D07E2175BDAD0016288E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D500D0802175BDAD0016288E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKGH3PPX4X;
+				INFOPLIST_FILE = "KIT-BUS-APP/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yodaaa.KIT-BUS-APP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D500D0812175BDAD0016288E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKGH3PPX4X;
+				INFOPLIST_FILE = "KIT-BUS-APP/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yodaaa.KIT-BUS-APP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D500D0832175BDAD0016288E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKGH3PPX4X;
+				INFOPLIST_FILE = "KIT-BUS-APPTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yodaaa.KIT-BUS-APPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KIT-BUS-APP.app/KIT-BUS-APP";
+			};
+			name = Debug;
+		};
+		D500D0842175BDAD0016288E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKGH3PPX4X;
+				INFOPLIST_FILE = "KIT-BUS-APPTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yodaaa.KIT-BUS-APPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KIT-BUS-APP.app/KIT-BUS-APP";
+			};
+			name = Release;
+		};
+		D500D0862175BDAD0016288E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKGH3PPX4X;
+				INFOPLIST_FILE = "KIT-BUS-APPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yodaaa.KIT-BUS-APPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "KIT-BUS-APP";
+			};
+			name = Debug;
+		};
+		D500D0872175BDAD0016288E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKGH3PPX4X;
+				INFOPLIST_FILE = "KIT-BUS-APPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yodaaa.KIT-BUS-APPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "KIT-BUS-APP";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D500D0522175BDAB0016288E /* Build configuration list for PBXProject "KIT-BUS-APP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D500D07D2175BDAD0016288E /* Debug */,
+				D500D07E2175BDAD0016288E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D500D07F2175BDAD0016288E /* Build configuration list for PBXNativeTarget "KIT-BUS-APP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D500D0802175BDAD0016288E /* Debug */,
+				D500D0812175BDAD0016288E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D500D0822175BDAD0016288E /* Build configuration list for PBXNativeTarget "KIT-BUS-APPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D500D0832175BDAD0016288E /* Debug */,
+				D500D0842175BDAD0016288E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D500D0852175BDAD0016288E /* Build configuration list for PBXNativeTarget "KIT-BUS-APPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D500D0862175BDAD0016288E /* Debug */,
+				D500D0872175BDAD0016288E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D500D04F2175BDAB0016288E /* Project object */;
+}
