@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeTableCell" customModule="KIT_BUS_APP" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TimeTableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="TimeTableCell" id="fdE-gC-hpA" userLabel="TimeTableCell" customClass="TimeTableCell" customModule="KIT_BUS_APP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fdE-gC-hpA" id="2pd-V4-4Ro">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="busID" text="ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPk-7W-UZ5">
+                        <rect key="frame" x="16" y="12.5" width="16.5" height="20.5"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="発車時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8u-YS-J43">
+                        <rect key="frame" x="87.5" y="12" width="70" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDv-XG-7zl">
+                        <rect key="frame" x="309.5" y="7" width="31" height="30"/>
+                        <state key="normal" title="通知"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="到着時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDO-43-UbU">
+                        <rect key="frame" x="189.5" y="12" width="70" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WDv-XG-7zl" firstAttribute="centerY" secondItem="2pd-V4-4Ro" secondAttribute="centerY" id="7kg-Ev-wWA"/>
+                    <constraint firstItem="gPk-7W-UZ5" firstAttribute="baseline" secondItem="q8u-YS-J43" secondAttribute="baseline" id="7ud-kZ-5wh"/>
+                    <constraint firstItem="gPk-7W-UZ5" firstAttribute="bottom" secondItem="2pd-V4-4Ro" secondAttribute="bottomMargin" id="Sve-YW-5yj"/>
+                    <constraint firstItem="gPk-7W-UZ5" firstAttribute="leading" secondItem="2pd-V4-4Ro" secondAttribute="leadingMargin" id="ckZ-5e-k7A"/>
+                    <constraint firstItem="yDO-43-UbU" firstAttribute="leading" secondItem="q8u-YS-J43" secondAttribute="trailing" constant="32" id="lej-20-tde"/>
+                    <constraint firstItem="q8u-YS-J43" firstAttribute="baseline" secondItem="yDO-43-UbU" secondAttribute="baseline" id="uLA-RN-cK3"/>
+                    <constraint firstItem="WDv-XG-7zl" firstAttribute="leading" secondItem="yDO-43-UbU" secondAttribute="trailing" constant="50" id="wqS-2g-rgY"/>
+                    <constraint firstItem="q8u-YS-J43" firstAttribute="leading" secondItem="gPk-7W-UZ5" secondAttribute="trailing" constant="55" id="zbg-4V-2Z5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="busID" destination="gPk-7W-UZ5" id="hu5-e0-Xwn"/>
+            </connections>
+            <point key="canvasLocation" x="-279.19999999999999" y="-46.776611694152926"/>
+        </tableViewCell>
+    </objects>
+</document>

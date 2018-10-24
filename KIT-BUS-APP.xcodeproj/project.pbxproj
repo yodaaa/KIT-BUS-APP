@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		D500D05B2175BDAB0016288E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D05A2175BDAB0016288E /* AppDelegate.swift */; };
-		D500D05D2175BDAB0016288E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D05C2175BDAB0016288E /* ViewController.swift */; };
+		D500D05D2175BDAB0016288E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D05C2175BDAB0016288E /* PageViewController.swift */; };
 		D500D0602175BDAB0016288E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D500D05E2175BDAB0016288E /* Main.storyboard */; };
 		D500D0622175BDAD0016288E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D500D0612175BDAD0016288E /* Assets.xcassets */; };
 		D500D0652175BDAD0016288E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D500D0632175BDAD0016288E /* LaunchScreen.storyboard */; };
 		D500D0702175BDAD0016288E /* KIT_BUS_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D06F2175BDAD0016288E /* KIT_BUS_APPTests.swift */; };
 		D500D07B2175BDAD0016288E /* KIT_BUS_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D07A2175BDAD0016288E /* KIT_BUS_APPUITests.swift */; };
+		D500D0CB2175C66D0016288E /* YViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D0CA2175C66D0016288E /* YViewController.swift */; };
+		D500D0CD2175C8960016288E /* OViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500D0CC2175C8960016288E /* OViewController.swift */; };
+		D507C9A42175D002001F82D9 /* TimeCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D507C9A32175D002001F82D9 /* TimeCardView.xib */; };
+		D507C9A62175D363001F82D9 /* TImeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D507C9A52175D363001F82D9 /* TImeCardView.swift */; };
+		D507C9A92175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */; };
+		D507C9AB21762F38001F82D9 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D507C9AA21762F38001F82D9 /* TimeTableCell.swift */; };
+		D507C9AD217630BA001F82D9 /* TimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D507C9AC217630BA001F82D9 /* TimeTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,7 @@
 /* Begin PBXFileReference section */
 		D500D0572175BDAB0016288E /* KIT-BUS-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KIT-BUS-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D500D05A2175BDAB0016288E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D500D05C2175BDAB0016288E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D500D05C2175BDAB0016288E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		D500D05F2175BDAB0016288E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D500D0612175BDAD0016288E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D500D0642175BDAD0016288E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,13 @@
 		D500D0762175BDAD0016288E /* KIT-BUS-APPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KIT-BUS-APPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D500D07A2175BDAD0016288E /* KIT_BUS_APPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIT_BUS_APPUITests.swift; sourceTree = "<group>"; };
 		D500D07C2175BDAD0016288E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D500D0CA2175C66D0016288E /* YViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YViewController.swift; sourceTree = "<group>"; };
+		D500D0CC2175C8960016288E /* OViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OViewController.swift; sourceTree = "<group>"; };
+		D507C9A32175D002001F82D9 /* TimeCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCardView.xib; sourceTree = "<group>"; };
+		D507C9A52175D363001F82D9 /* TImeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImeCardView.swift; sourceTree = "<group>"; };
+		D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+RuntimeAttribute.swift"; sourceTree = "<group>"; };
+		D507C9AA21762F38001F82D9 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
+		D507C9AC217630BA001F82D9 /* TimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +112,18 @@
 			isa = PBXGroup;
 			children = (
 				D500D05A2175BDAB0016288E /* AppDelegate.swift */,
-				D500D05C2175BDAB0016288E /* ViewController.swift */,
+				D500D05C2175BDAB0016288E /* PageViewController.swift */,
 				D500D05E2175BDAB0016288E /* Main.storyboard */,
 				D500D0612175BDAD0016288E /* Assets.xcassets */,
 				D500D0632175BDAD0016288E /* LaunchScreen.storyboard */,
 				D500D0662175BDAD0016288E /* Info.plist */,
+				D500D0CC2175C8960016288E /* OViewController.swift */,
+				D500D0CA2175C66D0016288E /* YViewController.swift */,
+				D507C9A32175D002001F82D9 /* TimeCardView.xib */,
+				D507C9A52175D363001F82D9 /* TImeCardView.swift */,
+				D507C9AC217630BA001F82D9 /* TimeTableCell.xib */,
+				D507C9AA21762F38001F82D9 /* TimeTableCell.swift */,
+				D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */,
 			);
 			path = "KIT-BUS-APP";
 			sourceTree = "<group>";
@@ -229,8 +250,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D507C9AD217630BA001F82D9 /* TimeTableCell.xib in Resources */,
 				D500D0652175BDAD0016288E /* LaunchScreen.storyboard in Resources */,
 				D500D0622175BDAD0016288E /* Assets.xcassets in Resources */,
+				D507C9A42175D002001F82D9 /* TimeCardView.xib in Resources */,
 				D500D0602175BDAB0016288E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D500D05D2175BDAB0016288E /* ViewController.swift in Sources */,
+				D500D0CB2175C66D0016288E /* YViewController.swift in Sources */,
+				D500D05D2175BDAB0016288E /* PageViewController.swift in Sources */,
+				D500D0CD2175C8960016288E /* OViewController.swift in Sources */,
+				D507C9A62175D363001F82D9 /* TImeCardView.swift in Sources */,
 				D500D05B2175BDAB0016288E /* AppDelegate.swift in Sources */,
+				D507C9A92175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift in Sources */,
+				D507C9AB21762F38001F82D9 /* TimeTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SKGH3PPX4X;
 				INFOPLIST_FILE = "KIT-BUS-APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SKGH3PPX4X;
 				INFOPLIST_FILE = "KIT-BUS-APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
