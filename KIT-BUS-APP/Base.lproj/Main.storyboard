@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Bq-wL-qWd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Bq-wL-qWd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,16 +25,18 @@
                                 <rect key="frame" x="0.0" y="111" width="375" height="556"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgX-Il-Pli">
-                                        <rect key="frame" x="10" y="10" width="355" height="580"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="wgX-Il-Pli" firstAttribute="centerY" secondItem="LlA-Nh-fKT" secondAttribute="centerY" constant="22" id="1u6-RG-8rz"/>
-                                    <constraint firstItem="wgX-Il-Pli" firstAttribute="top" secondItem="LlA-Nh-fKT" secondAttribute="top" constant="10" id="GhM-rj-1p9"/>
+                                    <constraint firstAttribute="trailing" secondItem="wgX-Il-Pli" secondAttribute="trailing" id="8hb-YV-blf"/>
+                                    <constraint firstItem="wgX-Il-Pli" firstAttribute="leading" secondItem="LlA-Nh-fKT" secondAttribute="leading" id="Vl2-eQ-Tvc"/>
                                     <constraint firstAttribute="bottom" secondItem="wgX-Il-Pli" secondAttribute="bottom" constant="-44" id="WKV-0d-pd3"/>
-                                    <constraint firstAttribute="trailing" secondItem="wgX-Il-Pli" secondAttribute="trailing" constant="10" id="uaU-ga-Fjc"/>
-                                    <constraint firstItem="wgX-Il-Pli" firstAttribute="leading" secondItem="LlA-Nh-fKT" secondAttribute="leading" constant="10" id="w25-eR-hCI"/>
+                                    <constraint firstAttribute="trailing" secondItem="wgX-Il-Pli" secondAttribute="trailing" id="gyE-on-h3V"/>
+                                    <constraint firstItem="wgX-Il-Pli" firstAttribute="top" secondItem="LlA-Nh-fKT" secondAttribute="top" id="mWX-oy-nLd"/>
+                                    <constraint firstItem="wgX-Il-Pli" firstAttribute="leading" secondItem="LlA-Nh-fKT" secondAttribute="leading" id="pgT-Zz-4xv"/>
                                     <constraint firstItem="wgX-Il-Pli" firstAttribute="centerX" secondItem="LlA-Nh-fKT" secondAttribute="centerX" id="xem-bq-L94"/>
                                 </constraints>
                             </scrollView>

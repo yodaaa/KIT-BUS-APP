@@ -21,6 +21,11 @@
 		D507C9A92175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */; };
 		D507C9AB21762F38001F82D9 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D507C9AA21762F38001F82D9 /* TimeTableCell.swift */; };
 		D507C9AD217630BA001F82D9 /* TimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D507C9AC217630BA001F82D9 /* TimeTableCell.xib */; };
+		D5D1136121874A40002A0E4C /* buslist_go_o_summer.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D1135D21874A40002A0E4C /* buslist_go_o_summer.json */; };
+		D5D1136221874A40002A0E4C /* buslist_go_o.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D1135E21874A40002A0E4C /* buslist_go_o.json */; };
+		D5D1136321874A40002A0E4C /* buslist_go_y_summer.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D1135F21874A40002A0E4C /* buslist_go_y_summer.json */; };
+		D5D1136421874A40002A0E4C /* buslist_go_y.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D1136021874A40002A0E4C /* buslist_go_y.json */; };
+		D5D1136621874AF9002A0E4C /* bulistJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D1136521874AF9002A0E4C /* bulistJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,11 @@
 		D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+RuntimeAttribute.swift"; sourceTree = "<group>"; };
 		D507C9AA21762F38001F82D9 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		D507C9AC217630BA001F82D9 /* TimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCell.xib; sourceTree = "<group>"; };
+		D5D1135D21874A40002A0E4C /* buslist_go_o_summer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buslist_go_o_summer.json; sourceTree = "<group>"; };
+		D5D1135E21874A40002A0E4C /* buslist_go_o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buslist_go_o.json; sourceTree = "<group>"; };
+		D5D1135F21874A40002A0E4C /* buslist_go_y_summer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buslist_go_y_summer.json; sourceTree = "<group>"; };
+		D5D1136021874A40002A0E4C /* buslist_go_y.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buslist_go_y.json; sourceTree = "<group>"; };
+		D5D1136521874AF9002A0E4C /* bulistJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bulistJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,7 @@
 		D500D0592175BDAB0016288E /* KIT-BUS-APP */ = {
 			isa = PBXGroup;
 			children = (
+				D5D1135C218749F4002A0E4C /* JSON */,
 				D500D05A2175BDAB0016288E /* AppDelegate.swift */,
 				D500D05C2175BDAB0016288E /* PageViewController.swift */,
 				D500D05E2175BDAB0016288E /* Main.storyboard */,
@@ -144,6 +155,18 @@
 				D500D07C2175BDAD0016288E /* Info.plist */,
 			);
 			path = "KIT-BUS-APPUITests";
+			sourceTree = "<group>";
+		};
+		D5D1135C218749F4002A0E4C /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D5D1135D21874A40002A0E4C /* buslist_go_o_summer.json */,
+				D5D1135E21874A40002A0E4C /* buslist_go_o.json */,
+				D5D1135F21874A40002A0E4C /* buslist_go_y_summer.json */,
+				D5D1136021874A40002A0E4C /* buslist_go_y.json */,
+				D5D1136521874AF9002A0E4C /* bulistJSON.swift */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,8 +276,12 @@
 				D507C9AD217630BA001F82D9 /* TimeTableCell.xib in Resources */,
 				D500D0652175BDAD0016288E /* LaunchScreen.storyboard in Resources */,
 				D500D0622175BDAD0016288E /* Assets.xcassets in Resources */,
+				D5D1136321874A40002A0E4C /* buslist_go_y_summer.json in Resources */,
+				D5D1136121874A40002A0E4C /* buslist_go_o_summer.json in Resources */,
 				D507C9A42175D002001F82D9 /* TimeCardView.xib in Resources */,
+				D5D1136221874A40002A0E4C /* buslist_go_o.json in Resources */,
 				D500D0602175BDAB0016288E /* Main.storyboard in Resources */,
+				D5D1136421874A40002A0E4C /* buslist_go_y.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D1136621874AF9002A0E4C /* bulistJSON.swift in Sources */,
 				D500D0CB2175C66D0016288E /* YViewController.swift in Sources */,
 				D500D05D2175BDAB0016288E /* PageViewController.swift in Sources */,
 				D500D0CD2175C8960016288E /* OViewController.swift in Sources */,

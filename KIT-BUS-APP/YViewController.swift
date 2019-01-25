@@ -22,6 +22,8 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
      override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
 //        self.timetable.frame = CGRect(x: 10, y: 40, width: 300, height: 600)
 //        self.timetable.layer.cornerRadius = 10
 //        self.timetable.layer.masksToBounds = false
@@ -30,25 +32,34 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
 //        self.timetable.layer.shadowRadius = 5
 //        self.timetable.layer.shadowColor = UIColor.black.cgColor
         
-        
-//        timecardview.frame = CGRect(x: Int(screenRatioWidth*1), y: 10, width: Int(screenSize.width - self.screenRatioWidth*22) , height: Int(screenSize.height))
-        timecardview.frame = CGRect(x: Int(screenRatioWidth*1), y: 10, width: Int(screenSize.width - self.screenRatioWidth*20) , height: Int(screenSize.height))
+        timecardview.frame = CGRect(x: 0, y: 10, width: Int(screenSize.width - screenRatioWidth*22) , height: Int(screenSize.height))
+//        timecardview.frame = CGRect(x: Int(screenRatioWidth*1), y: 10, width: Int(screenSize.width - self.screenRatioWidth*20) , height: Int(screenSize.height))
         self.timecardview.delegate = self
         self.timecardview.dataSource = self
         //self.timecardview.frame = CGRect(x: 10, y: 40, width: 300, height: 600)
         self.timecardview.layer.cornerRadius = 10
         self.timecardview.layer.masksToBounds = false
         self.timecardview.layer.shadowOpacity = 0.7
-        self.timecardview.layer.shadowOffset = CGSize(width: 5, height: 5)
+        self.timecardview.layer.shadowOffset = CGSize.zero//CGSize(width: 5, height: 5)
         self.timecardview.layer.shadowRadius = 5
         self.timecardview.layer.shadowColor = UIColor.black.cgColor
-
+        //self.timecardview.center = self.timetable.center
         self.timecardview.register(UINib(nibName: "TimeTableCell", bundle: nil), forCellReuseIdentifier: "TimeTableCell")
 
         self.timetable.addSubview(timecardview)
+        // constraints
+        self.timecardview.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         
 
         //addTimeCard()
+                print("---------")
+        guard let data = try? getJSONData() else { return }
+        print("data:\(data!)")
+        guard let animals = try? JSONDecoder().decode(BusList.self, from: data!) else { return print("error") }
+
+        print("animals.week:\(animals.duringTerm)")
+        
+        print("---------")
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,7 +76,7 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "TimeTableCell") as! TimeTableCell
         cell.layer.cornerRadius = 10
         
-        cell.busID.text = String(indexPath.row + 1)
+        cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
         //cell.departureTimeLabel.text = detime[indexPath.row]
 //        cell.arrivalTimeLabel.text = arrtime[indexPath.row]
         return cell
