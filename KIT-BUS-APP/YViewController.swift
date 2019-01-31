@@ -31,18 +31,24 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
 //        self.timetable.layer.shadowOffset = CGSize(width: 5, height: 5)
 //        self.timetable.layer.shadowRadius = 5
 //        self.timetable.layer.shadowColor = UIColor.black.cgColor
+        self.timetable.layer.cornerRadius = 10
+        self.timetable.layer.masksToBounds = false
+        self.timetable.layer.shadowOpacity = 0.7
+        self.timetable.layer.shadowOffset = CGSize.zero
+        self.timetable.layer.shadowRadius = 5
+        self.timetable.layer.shadowColor = UIColor.black.cgColor
         
-        timecardview.frame = CGRect(x: 0, y: 10, width: Int(screenSize.width - screenRatioWidth*22) , height: Int(screenSize.height))
+        timecardview.frame = CGRect(x: 0, y: 10, width: Int(screenSize.width - screenRatioWidth*20) , height: Int(screenSize.height))
 //        timecardview.frame = CGRect(x: Int(screenRatioWidth*1), y: 10, width: Int(screenSize.width - self.screenRatioWidth*20) , height: Int(screenSize.height))
         self.timecardview.delegate = self
         self.timecardview.dataSource = self
         //self.timecardview.frame = CGRect(x: 10, y: 40, width: 300, height: 600)
-        self.timecardview.layer.cornerRadius = 10
-        self.timecardview.layer.masksToBounds = false
-        self.timecardview.layer.shadowOpacity = 0.7
-        self.timecardview.layer.shadowOffset = CGSize.zero//CGSize(width: 5, height: 5)
-        self.timecardview.layer.shadowRadius = 5
-        self.timecardview.layer.shadowColor = UIColor.black.cgColor
+//        self.timecardview.layer.cornerRadius = 10
+//        self.timecardview.layer.masksToBounds = false
+//        self.timecardview.layer.shadowOpacity = 0.7
+//        self.timecardview.layer.shadowOffset = CGSize.zero//CGSize(width: 5, height: 5)
+//        self.timecardview.layer.shadowRadius = 5
+//        self.timecardview.layer.shadowColor = UIColor.black.cgColor
         //self.timecardview.center = self.timetable.center
         self.timecardview.register(UINib(nibName: "TimeTableCell", bundle: nil), forCellReuseIdentifier: "TimeTableCell")
 
