@@ -26,7 +26,7 @@ class OViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.timetable.layer.shadowRadius = 5
         self.timetable.layer.shadowColor = UIColor.black.cgColor
         
-        timecardview.frame = CGRect(x: 5, y: 10, width: Int(screenSize.width - screenRatioWidth*20) , height: Int(timetable.bounds.size.height)-50)
+        timecardview.frame = CGRect(x: 5, y: 10, width: Int(screenSize.width - screenRatioWidth*20) , height: Int(screenSize.height * 0.78))
         //        timecardview.frame = CGRect(x: Int(screenRatioWidth*1), y: 10, width: Int(screenSize.width - self.screenRatioWidth*20) , height: Int(screenSize.height))
         self.timecardview.delegate = self
         self.timecardview.dataSource = self

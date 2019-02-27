@@ -36,7 +36,10 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.timetable.layer.shadowRadius = 5
         self.timetable.layer.shadowColor = UIColor.black.cgColor
         
-        timecardview.frame = CGRect(x: 5, y: 10, width: Int(screenSize.width - screenRatioWidth*20) , height: Int(timetable.bounds.size.height)-50)
+        //timecardview.frame = CGRect(x: 5, y: 10, width: Int(screenSize.width - screenRatioWidth*20) , height: Int(timetable.frame.height)-40)
+        timecardview.frame = CGRect(x: 5, y: 10, width: Int(screenSize.width - screenRatioWidth*20) , height: Int(screenSize.height * 0.78))
+        Logger.debugLog(screenSize)
+        Logger.debugLog(timetable.bounds.size.height)
 //        timecardview.frame = CGRect(x: Int(screenRatioWidth*1), y: 10, width: Int(screenSize.width - self.screenRatioWidth*20) , height: Int(screenSize.height))
         self.timecardview.delegate = self
         self.timecardview.dataSource = self
@@ -64,6 +67,12 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         print("animals.week:\(animals.duringTerm)")
         
         print("---------")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        Logger.debugLog(screenSize)
+        Logger.debugLog(timetable.bounds.size.height)
+        Logger.debugLog(timetable.frame.height)
     }
     
     override func didReceiveMemoryWarning() {
