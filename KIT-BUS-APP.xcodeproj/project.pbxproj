@@ -22,6 +22,8 @@
 		D507C9AB21762F38001F82D9 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D507C9AA21762F38001F82D9 /* TimeTableCell.swift */; };
 		D507C9AD217630BA001F82D9 /* TimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D507C9AC217630BA001F82D9 /* TimeTableCell.xib */; };
 		D534AC322226877C001B249F /* DetermineDayOfTheWeekdays.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534AC312226877C001B249F /* DetermineDayOfTheWeekdays.swift */; };
+		D534AC342226A94A001B249F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534AC332226A94A001B249F /* DateExtension.swift */; };
+		D534AC382226F743001B249F /* CalculateCalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534AC372226F743001B249F /* CalculateCalendarLogic.swift */; };
 		D58BA50522265DFA00D33E07 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58BA50422265DFA00D33E07 /* Const.swift */; };
 		D595375E21FDFCE000C27E29 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595375D21FDFCE000C27E29 /* Logger.swift */; };
 		D5D1136121874A40002A0E4C /* buslist_go_o_summer.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D1135D21874A40002A0E4C /* buslist_go_o_summer.json */; };
@@ -70,6 +72,8 @@
 		D507C9AA21762F38001F82D9 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		D507C9AC217630BA001F82D9 /* TimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCell.xib; sourceTree = "<group>"; };
 		D534AC312226877C001B249F /* DetermineDayOfTheWeekdays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermineDayOfTheWeekdays.swift; sourceTree = "<group>"; };
+		D534AC332226A94A001B249F /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		D534AC372226F743001B249F /* CalculateCalendarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCalendarLogic.swift; sourceTree = "<group>"; };
 		D58BA50422265DFA00D33E07 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		D595375D21FDFCE000C27E29 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D5D1135D21874A40002A0E4C /* buslist_go_o_summer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buslist_go_o_summer.json; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 			children = (
 				D58BA50422265DFA00D33E07 /* Const.swift */,
 				D534AC312226877C001B249F /* DetermineDayOfTheWeekdays.swift */,
+				D534AC332226A94A001B249F /* DateExtension.swift */,
+				D534AC372226F743001B249F /* CalculateCalendarLogic.swift */,
 			);
 			path = OtherClass;
 			sourceTree = "<group>";
@@ -332,6 +338,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D1136621874AF9002A0E4C /* bulistJSON.swift in Sources */,
+				D534AC342226A94A001B249F /* DateExtension.swift in Sources */,
+				D534AC382226F743001B249F /* CalculateCalendarLogic.swift in Sources */,
 				D500D0CB2175C66D0016288E /* YViewController.swift in Sources */,
 				D534AC322226877C001B249F /* DetermineDayOfTheWeekdays.swift in Sources */,
 				D500D05D2175BDAB0016288E /* PageViewController.swift in Sources */,

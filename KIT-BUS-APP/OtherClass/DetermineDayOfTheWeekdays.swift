@@ -29,9 +29,11 @@ class DetermineDayOfTheWeekdays {
         return resultWeekdaysSymbols
     }
     
+    /// 現在時刻の10分前を取得
     func getpre10min() {
         let nowDate = NSDate()
-        var comps = DateComponents(minute: -10)
+        var comps = DateComponents(hour: 9, minute: -10)
+        
         Logger.debugLog(Calendar.current.date(byAdding: comps, to: nowDate as Date))
     }
 }
