@@ -19,6 +19,11 @@ class OViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let week = DetermineDayOfTheWeekdays().getDayOfTheWeek()
+        Logger.debugLog(week)
+        
+        let pre = DetermineDayOfTheWeekdays().getpre10min()
+        
         self.timetable.layer.cornerRadius = 10
         self.timetable.layer.masksToBounds = false
         self.timetable.layer.shadowOpacity = 0.7
@@ -74,4 +79,5 @@ class OViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
     }
+    
 }
