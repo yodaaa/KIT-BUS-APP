@@ -14,8 +14,6 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
     let screenRatioWidth: CGFloat = UIScreen.main.bounds.size.width / 320
     let screenRatioHeight: CGFloat = UIScreen.main.bounds.size.height / 568
     
-    let detime = ["8:20", "8:40", "9:20"]
-    let arrtime = ["8:50", "9:10", "9:50"]
     
     var timecardview: TimeCardView = TimeCardView()
     
@@ -60,7 +58,7 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         
 
         //addTimeCard()
-                print("---------")
+        print("---------")
         guard let data = try? getJSONData() else { return }
         print("data:\(data!)")
         guard let animals = try? JSONDecoder().decode(BusList.self, from: data!) else { return print("error") }
@@ -85,8 +83,14 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.layer.cornerRadius = 10
         
         cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
-        //cell.departureTimeLabel.text = detime[indexPath.row]
-//        cell.arrivalTimeLabel.text = arrtime[indexPath.row]
+        //Logger.debugLog(detime[indexPath.row])
+        let format = DateFormatter()
+        format.dateFormat = "HH:mm"
+        let deTimeStr = format.date(from: Const().detime_goy[indexPath.row])
+        cell.departureTimeLabel.text = format.string(from: deTimeStr!)
+        
+        let arrTimeStr = format.date(from: Const().arrtime_goy[indexPath.row])
+        cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
         return cell
     }
     

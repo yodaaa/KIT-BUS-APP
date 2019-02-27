@@ -21,6 +21,7 @@
 		D507C9A92175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */; };
 		D507C9AB21762F38001F82D9 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D507C9AA21762F38001F82D9 /* TimeTableCell.swift */; };
 		D507C9AD217630BA001F82D9 /* TimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D507C9AC217630BA001F82D9 /* TimeTableCell.xib */; };
+		D58BA50522265DFA00D33E07 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58BA50422265DFA00D33E07 /* Const.swift */; };
 		D595375E21FDFCE000C27E29 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595375D21FDFCE000C27E29 /* Logger.swift */; };
 		D5D1136121874A40002A0E4C /* buslist_go_o_summer.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D1135D21874A40002A0E4C /* buslist_go_o_summer.json */; };
 		D5D1136221874A40002A0E4C /* buslist_go_o.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D1135E21874A40002A0E4C /* buslist_go_o.json */; };
@@ -67,6 +68,7 @@
 		D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+RuntimeAttribute.swift"; sourceTree = "<group>"; };
 		D507C9AA21762F38001F82D9 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		D507C9AC217630BA001F82D9 /* TimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCell.xib; sourceTree = "<group>"; };
+		D58BA50422265DFA00D33E07 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		D595375D21FDFCE000C27E29 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D5D1135D21874A40002A0E4C /* buslist_go_o_summer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buslist_go_o_summer.json; sourceTree = "<group>"; };
 		D5D1135E21874A40002A0E4C /* buslist_go_o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buslist_go_o.json; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		D500D0592175BDAB0016288E /* KIT-BUS-APP */ = {
 			isa = PBXGroup;
 			children = (
+				D58BA50322265DE500D33E07 /* OtherClass */,
 				D595375C21FDFCBD00C27E29 /* Logger */,
 				D5D1135C218749F4002A0E4C /* JSON */,
 				D500D05A2175BDAB0016288E /* AppDelegate.swift */,
@@ -158,6 +161,14 @@
 				D500D07C2175BDAD0016288E /* Info.plist */,
 			);
 			path = "KIT-BUS-APPUITests";
+			sourceTree = "<group>";
+		};
+		D58BA50322265DE500D33E07 /* OtherClass */ = {
+			isa = PBXGroup;
+			children = (
+				D58BA50422265DFA00D33E07 /* Const.swift */,
+			);
+			path = OtherClass;
 			sourceTree = "<group>";
 		};
 		D595375C21FDFCBD00C27E29 /* Logger */ = {
@@ -326,6 +337,7 @@
 				D500D05B2175BDAB0016288E /* AppDelegate.swift in Sources */,
 				D507C9A92175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift in Sources */,
 				D507C9AB21762F38001F82D9 /* TimeTableCell.swift in Sources */,
+				D58BA50522265DFA00D33E07 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
