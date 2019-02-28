@@ -133,13 +133,46 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
                     cell.departureTimeLabel.text = ""
                 }
             } else {
-                // 平日
-                cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
-                let deTimeStr = format.date(from: Const().detime_goy[indexPath.row])
-                cell.departureTimeLabel.text = format.string(from: deTimeStr!)
+                // 夏季休業・春季休業期間中に関する処理
+                var dateS = Date()
+                var dateE = Date()
+                let formatYMD:DateFormatter = DateFormatter()
+                formatYMD.dateFormat = "yyyy/MM/dd"
+                dateS = formatYMD.date(from: "2019/03/01")!
+                dateE = formatYMD.date(from: "2019/03/29")!
                 
-                let arrTimeStr = format.date(from: Const().arrtime_goy[indexPath.row])
-                cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
+                if (dateS < date && date < dateE) {
+                    // 夏季休業・春季休業期間中
+                    // 平日
+                    if indexPath.row < Const().arrtime_goy_longh.count {
+                        cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
+                        let deTimeStr = format.date(from: Const().detime_goy_longh[indexPath.row])
+                        cell.departureTimeLabel.text = format.string(from: deTimeStr!)
+                    
+                        let arrTimeStr = format.date(from: Const().arrtime_goy_longh[indexPath.row])
+                        cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
+                    } else {
+                        cell.busID.text = ""
+                        cell.departureTimeLabel.text = ""
+                        cell.arrivalTimeLabel.text = ""
+                    }
+                } else {
+                    // 平日
+                    cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
+                    let deTimeStr = format.date(from: Const().detime_goy[indexPath.row])
+                    cell.departureTimeLabel.text = format.string(from: deTimeStr!)
+                    
+                    let arrTimeStr = format.date(from: Const().arrtime_goy[indexPath.row])
+                    cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
+                }
+                
+                
+                let formatter = DateIntervalFormatter()
+                formatter.dateStyle = .medium
+                formatter.timeStyle = .short
+                
+                Logger.debugLog(formatter.string(from: dateS, to: dateE))
+                
             }
         }
     
