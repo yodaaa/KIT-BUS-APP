@@ -20,7 +20,8 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
      override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        let date = Date()
+        Logger.debugLog(DetermineDayOfTheWeekdays().judgeHoliday(date)) 
         
 //        self.timetable.frame = CGRect(x: 10, y: 40, width: 300, height: 600)
 //        self.timetable.layer.cornerRadius = 10
@@ -89,15 +90,59 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "TimeTableCell") as! TimeTableCell
         cell.layer.cornerRadius = 10
         
-        cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
+        
         //Logger.debugLog(detime[indexPath.row])
         let format = DateFormatter()
         format.dateFormat = "HH:mm"
-        let deTimeStr = format.date(from: Const().detime_goy[indexPath.row])
-        cell.departureTimeLabel.text = format.string(from: deTimeStr!)
-        
-        let arrTimeStr = format.date(from: Const().arrtime_goy[indexPath.row])
-        cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
+    
+        // 日時を取得
+        let date = Date()
+        // 日時判定を行ういクラスのインスタンス生成
+        let determinationFromDateTime = DetermineDayOfTheWeekdays()
+        // 日時(曜日に合わせて、表示する時刻表を変える)
+        if  determinationFromDateTime.judgeHoliday(date) {
+            // 祝日の場合
+            cell.busID.text = ""
+            cell.arrivalTimeLabel.text = ""
+            
+            if indexPath.row == 0 {
+                cell.departureTimeLabel.text = "本日のバスはありません。"
+            } else {
+                cell.departureTimeLabel.text = ""
+            }
+            
+        } else {
+            // 祝日でない場合
+            
+            // 土曜日の場合
+            if determinationFromDateTime.judgeSaturday(date) {
+                cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
+                let deTimeStr = format.date(from: Const().detime_goy_sat[indexPath.row])
+                cell.departureTimeLabel.text = format.string(from: deTimeStr!)
+                
+                let arrTimeStr = format.date(from: Const().arrtime_goy_sat[indexPath.row])
+                cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
+            } else if determinationFromDateTime.judgeSunday(date) {
+                //日曜日の場合
+                cell.busID.text = ""
+                cell.arrivalTimeLabel.text = ""
+                
+                if indexPath.row == 0 {
+                    cell.departureTimeLabel.text = "本日のバスはありません。"
+                } else {
+                    cell.departureTimeLabel.text = ""
+                }
+            } else {
+                // 平日
+                cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
+                let deTimeStr = format.date(from: Const().detime_goy[indexPath.row])
+                cell.departureTimeLabel.text = format.string(from: deTimeStr!)
+                
+                let arrTimeStr = format.date(from: Const().arrtime_goy[indexPath.row])
+                cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
+            }
+        }
+    
         return cell
     }
     

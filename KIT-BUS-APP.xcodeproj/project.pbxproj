@@ -136,17 +136,16 @@
 				D5D1135C218749F4002A0E4C /* JSON */,
 				D500D05A2175BDAB0016288E /* AppDelegate.swift */,
 				D500D05C2175BDAB0016288E /* PageViewController.swift */,
-				D500D05E2175BDAB0016288E /* Main.storyboard */,
-				D500D0612175BDAD0016288E /* Assets.xcassets */,
-				D500D0632175BDAD0016288E /* LaunchScreen.storyboard */,
-				D500D0662175BDAD0016288E /* Info.plist */,
-				D500D0CC2175C8960016288E /* OViewController.swift */,
 				D500D0CA2175C66D0016288E /* YViewController.swift */,
+				D500D0CC2175C8960016288E /* OViewController.swift */,
+				D500D05E2175BDAB0016288E /* Main.storyboard */,
+				D500D0632175BDAD0016288E /* LaunchScreen.storyboard */,
+				D500D0612175BDAD0016288E /* Assets.xcassets */,
+				D500D0662175BDAD0016288E /* Info.plist */,
 				D507C9A32175D002001F82D9 /* TimeCardView.xib */,
 				D507C9A52175D363001F82D9 /* TImeCardView.swift */,
 				D507C9AC217630BA001F82D9 /* TimeTableCell.xib */,
 				D507C9AA21762F38001F82D9 /* TimeTableCell.swift */,
-				D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */,
 			);
 			path = "KIT-BUS-APP";
 			sourceTree = "<group>";
@@ -176,6 +175,7 @@
 				D534AC312226877C001B249F /* DetermineDayOfTheWeekdays.swift */,
 				D534AC332226A94A001B249F /* DateExtension.swift */,
 				D534AC372226F743001B249F /* CalculateCalendarLogic.swift */,
+				D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */,
 			);
 			path = OtherClass;
 			sourceTree = "<group>";
