@@ -12,6 +12,7 @@ class TimeTableCell: UITableViewCell{
     @IBOutlet weak var departureTimeLabel: UILabel!
     @IBOutlet weak var arrivalTimeLabel: UILabel!
     @IBOutlet weak var busID: UILabel!
+    @IBOutlet weak var arrowLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

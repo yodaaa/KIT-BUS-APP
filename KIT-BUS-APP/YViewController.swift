@@ -20,9 +20,6 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
      override func viewDidLoad() {
         super.viewDidLoad()
         
-        let date = Date()
-        Logger.debugLog(DetermineDayOfTheWeekdays().judgeHoliday(date)) 
-        
 //        self.timetable.frame = CGRect(x: 10, y: 40, width: 300, height: 600)
 //        self.timetable.layer.cornerRadius = 10
 //        self.timetable.layer.masksToBounds = false
@@ -37,11 +34,8 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.timetable.layer.shadowRadius = 5
         self.timetable.layer.shadowColor = UIColor.black.cgColor
         
-        //timecardview.frame = CGRect(x: 5, y: 10, width: Int(screenSize.width - screenRatioWidth*20) , height: Int(timetable.frame.height)-40)
         timecardview.frame = CGRect(x: 5, y: 10, width: Int(screenSize.width - screenRatioWidth*20) , height: Int(screenSize.height * 0.78))
-        Logger.debugLog(screenSize)
-        Logger.debugLog(timetable.bounds.size.height)
-//        timecardview.frame = CGRect(x: Int(screenRatioWidth*1), y: 10, width: Int(screenSize.width - self.screenRatioWidth*20) , height: Int(screenSize.height))
+
         self.timecardview.delegate = self
         self.timecardview.dataSource = self
         //self.timecardview.frame = CGRect(x: 10, y: 40, width: 300, height: 600)
@@ -71,9 +65,6 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        Logger.debugLog(screenSize)
-//        Logger.debugLog(timetable.bounds.size.height)
-//        Logger.debugLog(timetable.frame.height)
     }
     
     override func didReceiveMemoryWarning() {
@@ -105,7 +96,8 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
             if indexPath.row == 0 {
                 cell.busID.text = ""
                 cell.arrivalTimeLabel.text = ""
-                cell.departureTimeLabel.text = "本日のバスはありません。"
+                cell.arrowLabel.text = "本日のバスはありません。"
+                cell.departureTimeLabel.text = ""
             } else {
                 setTableEmpty(cell)
             }
@@ -116,12 +108,6 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
             // 土曜日の場合
             if determinationFromDateTime.judgeSaturday(date) {
                 if indexPath.row < Const().detime_goy_sat.count {
-//                    cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
-//                    let deTimeStr = format.date(from: Const().detime_goy_sat[indexPath.row])
-//                    cell.departureTimeLabel.text = format.string(from: deTimeStr!)
-//
-//                    let arrTimeStr = format.date(from: Const().arrtime_goy_sat[indexPath.row])
-//                    cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
                     setTableDate(cell, format, indexPath, Const().detime_goy_sat, Const().arrtime_goy_sat)
                 } else {
                     setTableEmpty(cell)
@@ -132,7 +118,8 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
                 if indexPath.row == 0 {
                     cell.busID.text = ""
                     cell.arrivalTimeLabel.text = ""
-                    cell.departureTimeLabel.text = "本日のバスはありません。"
+                    cell.arrowLabel.text = "本日のバスはありません。"
+                    cell.departureTimeLabel.text = ""
                 } else {
                     setTableEmpty(cell)
                 }
@@ -149,24 +136,12 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
                     // 夏季休業・春季休業期間中
                     // 平日
                     if indexPath.row < Const().arrtime_goy_longh.count {
-//                        cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
-//                        let deTimeStr = format.date(from: Const().detime_goy_longh[indexPath.row])
-//                        cell.departureTimeLabel.text = format.string(from: deTimeStr!)
-//
-//                        let arrTimeStr = format.date(from: Const().arrtime_goy_longh[indexPath.row])
-//                        cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
                         setTableDate(cell, format, indexPath, Const().detime_goy_longh, Const().arrtime_goy_longh)
                     } else {
                         setTableEmpty(cell)
                     }
                 } else {
                     // 平日 夏季休業などでない
-//                    cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
-//                    let deTimeStr = format.date(from: Const().detime_goy[indexPath.row])
-//                    cell.departureTimeLabel.text = format.string(from: deTimeStr!)
-//
-//                    let arrTimeStr = format.date(from: Const().arrtime_goy[indexPath.row])
-//                    cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
                     setTableDate(cell, format, indexPath, Const().detime_goy, Const().arrtime_goy)
                 }
                 
@@ -187,6 +162,7 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.busID.text = ""
         cell.departureTimeLabel.text = ""
         cell.arrivalTimeLabel.text = ""
+        cell.arrowLabel.text = ""
     }
     
     func setTableDate(_ cell: TimeTableCell, _ format: DateFormatter, _ indexPath: IndexPath, _ detime: [String], _ arrtime: [String]) {

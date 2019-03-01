@@ -19,20 +19,29 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" restorationIdentifier="busID" text="ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPk-7W-UZ5">
-                        <rect key="frame" x="16" y="16" width="20.5" height="17"/>
+                        <rect key="frame" x="16" y="16" width="21" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="21" id="4gd-rx-a2o"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="発車時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8u-YS-J43">
-                        <rect key="frame" x="91.5" y="16" width="68" height="17"/>
+                        <rect key="frame" x="92" y="16" width="68" height="17"/>
                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="到着時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDO-43-UbU">
-                        <rect key="frame" x="191.5" y="16" width="68" height="17"/>
+                        <rect key="frame" x="216" y="16" width="68" height="17"/>
                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cP-Q3-dcu">
+                        <rect key="frame" x="183.5" y="14" width="8" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -41,13 +50,16 @@
                     <constraint firstItem="gPk-7W-UZ5" firstAttribute="baseline" secondItem="q8u-YS-J43" secondAttribute="baseline" id="7ud-kZ-5wh"/>
                     <constraint firstItem="gPk-7W-UZ5" firstAttribute="bottom" secondItem="2pd-V4-4Ro" secondAttribute="bottomMargin" id="Sve-YW-5yj"/>
                     <constraint firstItem="gPk-7W-UZ5" firstAttribute="leading" secondItem="2pd-V4-4Ro" secondAttribute="leadingMargin" id="ckZ-5e-k7A"/>
-                    <constraint firstItem="yDO-43-UbU" firstAttribute="leading" secondItem="q8u-YS-J43" secondAttribute="trailing" constant="32" id="lej-20-tde"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yDO-43-UbU" secondAttribute="trailing" constant="75" id="rF8-N3-GBT"/>
                     <constraint firstItem="q8u-YS-J43" firstAttribute="baseline" secondItem="yDO-43-UbU" secondAttribute="baseline" id="uLA-RN-cK3"/>
+                    <constraint firstItem="8cP-Q3-dcu" firstAttribute="centerY" secondItem="2pd-V4-4Ro" secondAttribute="centerY" constant="2.75" id="vOL-tb-E6D"/>
                     <constraint firstItem="q8u-YS-J43" firstAttribute="leading" secondItem="gPk-7W-UZ5" secondAttribute="trailing" constant="55" id="zbg-4V-2Z5"/>
+                    <constraint firstItem="8cP-Q3-dcu" firstAttribute="centerX" secondItem="2pd-V4-4Ro" secondAttribute="centerX" id="zng-oM-VT6"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="arrivalTimeLabel" destination="yDO-43-UbU" id="FTB-pq-CHx"/>
+                <outlet property="arrowLabel" destination="8cP-Q3-dcu" id="DNo-RP-v4J"/>
                 <outlet property="busID" destination="gPk-7W-UZ5" id="hu5-e0-Xwn"/>
                 <outlet property="departureTimeLabel" destination="q8u-YS-J43" id="tT9-TX-atw"/>
             </connections>
