@@ -17,7 +17,9 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var timecardview: TimeCardView = TimeCardView()
     
-     override func viewDidLoad() {
+    var copyIndexPath: IndexPath = IndexPath()
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         
 //        self.timetable.frame = CGRect(x: 10, y: 40, width: 300, height: 600)
@@ -121,7 +123,8 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
                     cell.arrivalTimeLabel.text = ""
                     cell.arrowLabel.text = "本日のバスはありません。"
                     cell.departureTimeLabel.text = ""
-                    cell.notifyButton.isHidden = true
+                    //cell.notifyButton.isHidden = true
+                    cell.notifyButton.addTarget(self, action: #selector(notifyButtonAction(_:)), for: UIControlEvents.touchUpInside)
                 } else {
                     setTableEmpty(cell)
                 }
@@ -177,10 +180,25 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
         
         cell.notifyButton.isHidden = false
+        cell.notifyButton.tag = (indexPath.section*100) + indexPath.row
+        cell.notifyButton.addTarget(self, action: #selector(notifyButtonAction(_:)), for: UIControlEvents.touchUpInside)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       print(indexPath.row)
     }
     
+    @objc func notifyButtonAction(_ sender: UIButton) {
+        // buttonのtagからsectionとrowを分解取得
+        let section = sender.tag / 100
+        let row = sender.tag % 100
+        let indexPath = NSIndexPath(row: row, section: section)
+        // setNotifyにindexPathを渡す
+        self.setNotify(indexPath as IndexPath)
+    }
+    
+    func setNotify(_ indexPath: IndexPath)  {
+        Logger.debugLog(indexPath) // [0, 0] ~ [0, 12]あたりが表示される
+
+    }
 }
