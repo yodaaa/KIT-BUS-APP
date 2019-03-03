@@ -34,4 +34,8 @@ public struct Const {
     let detime_goo_longh: [String] = ["11:20", "14:00", "15:40", "17:00", "18:20", "20:00", "21:00"]
     let arrtime_goo_longh: [String] = ["11:50", "14:30", "16:10", "17:30", "18:50", "20:30", "21:30"]
     
+    let noBus: [[String]] = [[],[]]
+    
+    let longTermHolidayStart: String = "2019/03/01"
+    let longTermHolidayEnd: String = "2019/03/29"
 }

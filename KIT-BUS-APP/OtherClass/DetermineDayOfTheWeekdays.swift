@@ -81,6 +81,40 @@ class DetermineDayOfTheWeekdays {
         return false
     }
     
+    /// 曜日に合わせて処理を分岐(時刻データを変える
+    func changeTimelinebyWeekday(_ date: Date, _ goY: Bool) -> [[String]] {
+        let const = Const()
+        
+        // 祝日
+        if  judgeHoliday(date) {
+            return const.noBus
+        } else { //祝日以外
+            if judgeSaturday(date) {
+                return goY ? [const.detime_goy_sat, const.arrtime_goy_sat] : [const.detime_goo_sat, const.arrtime_goo_sat]
+            } else if judgeSunday(date) {
+                return const.noBus
+            } else {
+                // 夏季休業・春季休業期間中に関する処理
+                var dateS = Date()
+                var dateE = Date()
+                let formatYMD:DateFormatter = DateFormatter()
+                formatYMD.dateFormat = "yyyy/MM/dd"
+                dateS = formatYMD.date(from: const.longTermHolidayStart)!
+                dateE = formatYMD.date(from: const.longTermHolidayEnd)!
+                
+                if (dateS < date && date < dateE) {
+                    // 夏季休業・春季休業期間中
+                    // 平日
+                    return goY ? [const.detime_goy_longh, const.arrtime_goy_longh] : [const.detime_goo_longh, const.arrtime_goo_longh]
+                } else {
+                    // 平日
+                    return goY ? [const.detime_goy, const.arrtime_goy] : [const.detime_goo, const.arrtime_goo]
+                }
+            }
+        }
+    }
+    
+    
     /// 現在時刻の10分前を取得
     func getpre10min() {
         let nowDate = NSDate()

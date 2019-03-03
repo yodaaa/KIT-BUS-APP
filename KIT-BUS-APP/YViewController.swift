@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var timetable: UIView!
@@ -84,85 +85,44 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.layer.cornerRadius = 10
         
         
-        //Logger.debugLog(detime[indexPath.row])
+        // -----
         let format = DateFormatter()
         format.dateFormat = "HH:mm"
-    
+
         // 日時を取得
         let date = Date()
         // 日時判定を行ういクラスのインスタンス生成
         let determinationFromDateTime = DetermineDayOfTheWeekdays()
         // 日時(曜日に合わせて、表示する時刻表を変える)
-        if  determinationFromDateTime.judgeHoliday(date) {
-            // 祝日の場合
+        let setData: [[String]] = determinationFromDateTime.changeTimelinebyWeekday(date, true)
+        Logger.debugLog(setData)
+        
+        if setData[0].isEmpty {
+            //
             if indexPath.row == 0 {
                 cell.busID.text = ""
                 cell.arrivalTimeLabel.text = ""
                 cell.arrowLabel.text = "本日のバスはありません。"
                 cell.departureTimeLabel.text = ""
-                cell.notifyButton.isHidden = true
+                //cell.notifyButton.isHidden = true
             } else {
                 setTableEmpty(cell)
             }
             
         } else {
-            // 祝日でない場合
-            
-            // 土曜日の場合
-            if determinationFromDateTime.judgeSaturday(date) {
-                if indexPath.row < Const().detime_goy_sat.count {
-                    setTableDate(cell, format, indexPath, Const().detime_goy_sat, Const().arrtime_goy_sat)
-                } else {
-                    setTableEmpty(cell)
-                }
-            } else if determinationFromDateTime.judgeSunday(date) {
-                //日曜日の場合
-                
-                if indexPath.row == 0 {
-                    cell.busID.text = ""
-                    cell.arrivalTimeLabel.text = ""
-                    cell.arrowLabel.text = "本日のバスはありません。"
-                    cell.departureTimeLabel.text = ""
-                    //cell.notifyButton.isHidden = true
-                    cell.notifyButton.addTarget(self, action: #selector(notifyButtonAction(_:)), for: UIControlEvents.touchUpInside)
-                } else {
-                    setTableEmpty(cell)
-                }
+            if indexPath.row < setData[0].count {
+                setTableDate(cell, format, indexPath, setData[0], setData[1])
             } else {
-                // 夏季休業・春季休業期間中に関する処理
-                var dateS = Date()
-                var dateE = Date()
-                let formatYMD:DateFormatter = DateFormatter()
-                formatYMD.dateFormat = "yyyy/MM/dd"
-                dateS = formatYMD.date(from: "2019/03/01")!
-                dateE = formatYMD.date(from: "2019/03/29")!
-                
-                if (dateS < date && date < dateE) {
-                    // 夏季休業・春季休業期間中
-                    // 平日
-                    if indexPath.row < Const().arrtime_goy_longh.count {
-                        setTableDate(cell, format, indexPath, Const().detime_goy_longh, Const().arrtime_goy_longh)
-                    } else {
-                        setTableEmpty(cell)
-                    }
-                } else {
-                    // 平日 夏季休業などでない
-                    setTableDate(cell, format, indexPath, Const().detime_goy, Const().arrtime_goy)
-                }
-                
-                
-//                let formatter = DateIntervalFormatter()
-//                formatter.dateStyle = .medium
-//                formatter.timeStyle = .short
-//
-//                Logger.debugLog(formatter.string(from: dateS, to: dateE))
-                
+                setTableEmpty(cell)
             }
+            
         }
-    
+        // -----
+        
         return cell
     }
     
+    // バスの便がなく, cellが空の場合
     func setTableEmpty(_ cell: TimeTableCell)  {
         cell.busID.text = ""
         cell.departureTimeLabel.text = ""
@@ -171,6 +131,7 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.notifyButton.isHidden = true
     }
     
+    // cellにぶバスの時刻などをセットする
     func setTableDate(_ cell: TimeTableCell, _ format: DateFormatter, _ indexPath: IndexPath, _ detime: [String], _ arrtime: [String]) {
         cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
         let deTimeStr = format.date(from: detime[indexPath.row])
@@ -184,10 +145,12 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.notifyButton.addTarget(self, action: #selector(notifyButtonAction(_:)), for: UIControlEvents.touchUpInside)
     }
     
+    // debug
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       print(indexPath.row)
     }
     
+    /// 通知のボタンのアクション
     @objc func notifyButtonAction(_ sender: UIButton) {
         // buttonのtagからsectionとrowを分解取得
         let section = sender.tag / 100
@@ -197,8 +160,31 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.setNotify(indexPath as IndexPath)
     }
     
+    /// 通知を設定する
     func setNotify(_ indexPath: IndexPath)  {
         Logger.debugLog(indexPath) // [0, 0] ~ [0, 12]あたりが表示される
-
+        
+        // 通知許可ダイアログを表示
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+            // エラー処理
+        }
+        // 通知内容の設定
+        let content = UNMutableNotificationContent()
+        // 通知のタイトルを設定
+        content.title = NSString.localizedUserNotificationString(forKey: "八束穂行きバス ", arguments: nil)
+        // 通知の本文を設定
+        content.body = NSString.localizedUserNotificationString(forKey: "発車まで あと15分です", arguments: nil)
+        // 通知の音楽を設定
+        content.sound = UNNotificationSound.default()
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest(identifier: "Identifier", content: content, trigger: trigger)
+        center.add(request) { (error : Error?) in
+            if error != nil {
+                // エラー処理
+            }
+        }
     }
 }
