@@ -45,16 +45,19 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wr-07-4dZ">
-                        <rect key="frame" x="310" y="9" width="31" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="通知"/>
+                    <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wr-07-4dZ">
+                        <rect key="frame" x="317" y="11" width="23" height="23"/>
+                        <state key="normal" image="notify_icon"/>
+                        <state key="highlighted" image="notify_icon"/>
                     </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="gPk-7W-UZ5" firstAttribute="baseline" secondItem="q8u-YS-J43" secondAttribute="baseline" id="7ud-kZ-5wh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0wr-07-4dZ" secondAttribute="trailing" constant="19" id="SsB-NG-4ZP"/>
                     <constraint firstItem="gPk-7W-UZ5" firstAttribute="bottom" secondItem="2pd-V4-4Ro" secondAttribute="bottomMargin" id="Sve-YW-5yj"/>
+                    <constraint firstItem="0wr-07-4dZ" firstAttribute="bottom" secondItem="yDO-43-UbU" secondAttribute="bottom" constant="1" id="WN0-Yd-3x2"/>
                     <constraint firstItem="gPk-7W-UZ5" firstAttribute="leading" secondItem="2pd-V4-4Ro" secondAttribute="leadingMargin" id="ckZ-5e-k7A"/>
+                    <constraint firstItem="0wr-07-4dZ" firstAttribute="centerY" secondItem="2pd-V4-4Ro" secondAttribute="centerY" id="hJ6-Zk-1aV"/>
                     <constraint firstAttribute="trailingMargin" secondItem="yDO-43-UbU" secondAttribute="trailing" constant="75" id="rF8-N3-GBT"/>
                     <constraint firstItem="q8u-YS-J43" firstAttribute="baseline" secondItem="yDO-43-UbU" secondAttribute="baseline" id="uLA-RN-cK3"/>
                     <constraint firstItem="8cP-Q3-dcu" firstAttribute="centerY" secondItem="2pd-V4-4Ro" secondAttribute="centerY" constant="2.75" id="vOL-tb-E6D"/>
@@ -67,8 +70,12 @@
                 <outlet property="arrowLabel" destination="8cP-Q3-dcu" id="DNo-RP-v4J"/>
                 <outlet property="busID" destination="gPk-7W-UZ5" id="hu5-e0-Xwn"/>
                 <outlet property="departureTimeLabel" destination="q8u-YS-J43" id="tT9-TX-atw"/>
+                <outlet property="notifyButton" destination="0wr-07-4dZ" id="iDh-ch-Z3j"/>
             </connections>
             <point key="canvasLocation" x="-279.19999999999999" y="-46.776611694152926"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="notify_icon" width="64" height="64"/>
+    </resources>
 </document>

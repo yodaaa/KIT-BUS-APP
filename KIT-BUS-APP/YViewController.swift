@@ -98,6 +98,7 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
                 cell.arrivalTimeLabel.text = ""
                 cell.arrowLabel.text = "本日のバスはありません。"
                 cell.departureTimeLabel.text = ""
+                cell.notifyButton.isHidden = true
             } else {
                 setTableEmpty(cell)
             }
@@ -120,6 +121,7 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
                     cell.arrivalTimeLabel.text = ""
                     cell.arrowLabel.text = "本日のバスはありません。"
                     cell.departureTimeLabel.text = ""
+                    cell.notifyButton.isHidden = true
                 } else {
                     setTableEmpty(cell)
                 }
@@ -163,6 +165,7 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.departureTimeLabel.text = ""
         cell.arrivalTimeLabel.text = ""
         cell.arrowLabel.text = ""
+        cell.notifyButton.isHidden = true
     }
     
     func setTableDate(_ cell: TimeTableCell, _ format: DateFormatter, _ indexPath: IndexPath, _ detime: [String], _ arrtime: [String]) {
@@ -172,6 +175,8 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         let arrTimeStr = format.date(from: arrtime[indexPath.row])
         cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
+        
+        cell.notifyButton.isHidden = false
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
