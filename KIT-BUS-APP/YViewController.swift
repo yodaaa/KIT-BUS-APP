@@ -95,7 +95,7 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let determinationFromDateTime = DetermineDayOfTheWeekdays()
         // 日時(曜日に合わせて、表示する時刻表を変える)
         let setData: [[String]] = determinationFromDateTime.changeTimelinebyWeekday(date, true)
-        Logger.debugLog(setData)
+        //Logger.debugLog(setData)
         
         if setData[0].isEmpty {
             //
@@ -105,6 +105,8 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
                 cell.arrowLabel.text = "本日のバスはありません。"
                 cell.departureTimeLabel.text = ""
                 //cell.notifyButton.isHidden = true
+                cell.notifyButton.accessibilityHint = "12:00"
+                cell.notifyButton.addTarget(self, action: #selector(notifyButtonAction(_:)), for: UIControlEvents.touchUpInside)
             } else {
                 setTableEmpty(cell)
             }
@@ -131,7 +133,7 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.notifyButton.isHidden = true
     }
     
-    // cellにぶバスの時刻などをセットする
+    // cellにバスの時刻などをセットする
     func setTableDate(_ cell: TimeTableCell, _ format: DateFormatter, _ indexPath: IndexPath, _ detime: [String], _ arrtime: [String]) {
         cell.busID.text = String(NSString(format: "%02d", indexPath.row+1))
         let deTimeStr = format.date(from: detime[indexPath.row])
@@ -142,6 +144,12 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         cell.notifyButton.isHidden = false
         cell.notifyButton.tag = (indexPath.section*100) + indexPath.row
+        if format.string(from: deTimeStr!).isEmpty {
+            Logger.debugLog("test")
+            cell.notifyButton.accessibilityHint = ""
+        } else {
+            cell.notifyButton.accessibilityHint = format.string(from: deTimeStr!)
+        }
         cell.notifyButton.addTarget(self, action: #selector(notifyButtonAction(_:)), for: UIControlEvents.touchUpInside)
     }
     
@@ -156,14 +164,15 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let section = sender.tag / 100
         let row = sender.tag % 100
         let indexPath = NSIndexPath(row: row, section: section)
+        let deTime: String = sender.accessibilityHint!
         // setNotifyにindexPathを渡す
-        self.setNotify(indexPath as IndexPath)
+        self.setNotify(indexPath as IndexPath, deTime)
     }
     
     /// 通知を設定する
-    func setNotify(_ indexPath: IndexPath)  {
+    func setNotify(_ indexPath: IndexPath, _ detime: String)  {
         Logger.debugLog(indexPath) // [0, 0] ~ [0, 12]あたりが表示される
-        
+        Logger.debugLog(detime)
         // 通知許可ダイアログを表示
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) {
@@ -173,13 +182,13 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         // 通知内容の設定
         let content = UNMutableNotificationContent()
         // 通知のタイトルを設定
-        content.title = NSString.localizedUserNotificationString(forKey: "八束穂行きバス ", arguments: nil)
+        content.title = NSString.localizedUserNotificationString(forKey: "八束穂行きバス \(detime)発", arguments: nil)
         // 通知の本文を設定
         content.body = NSString.localizedUserNotificationString(forKey: "発車まで あと15分です", arguments: nil)
         // 通知の音楽を設定
         content.sound = UNNotificationSound.default()
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
         let request = UNNotificationRequest(identifier: "Identifier", content: content, trigger: trigger)
         center.add(request) { (error : Error?) in
             if error != nil {

@@ -85,7 +85,7 @@ class OViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
                 cell.arrivalTimeLabel.text = ""
                 cell.arrowLabel.text = "本日のバスはありません。"
                 cell.departureTimeLabel.text = ""
-                //cell.notifyButton.isHidden = true
+                cell.notifyButton.isHidden = true
             } else {
                 setTableEmpty(cell)
             }
