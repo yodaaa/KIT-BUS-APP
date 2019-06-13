@@ -21,6 +21,7 @@
 		D507C9A92175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */; };
 		D507C9AB21762F38001F82D9 /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D507C9AA21762F38001F82D9 /* TimeTableCell.swift */; };
 		D507C9AD217630BA001F82D9 /* TimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D507C9AC217630BA001F82D9 /* TimeTableCell.xib */; };
+		D52D5BBE2230DDE600B84369 /* InfiniteHarassmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52D5BBD2230DDE600B84369 /* InfiniteHarassmentButton.swift */; };
 		D534AC322226877C001B249F /* DetermineDayOfTheWeekdays.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534AC312226877C001B249F /* DetermineDayOfTheWeekdays.swift */; };
 		D534AC342226A94A001B249F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534AC332226A94A001B249F /* DateExtension.swift */; };
 		D534AC382226F743001B249F /* CalculateCalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534AC372226F743001B249F /* CalculateCalendarLogic.swift */; };
@@ -71,6 +72,7 @@
 		D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+RuntimeAttribute.swift"; sourceTree = "<group>"; };
 		D507C9AA21762F38001F82D9 /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		D507C9AC217630BA001F82D9 /* TimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCell.xib; sourceTree = "<group>"; };
+		D52D5BBD2230DDE600B84369 /* InfiniteHarassmentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteHarassmentButton.swift; sourceTree = "<group>"; };
 		D534AC312226877C001B249F /* DetermineDayOfTheWeekdays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermineDayOfTheWeekdays.swift; sourceTree = "<group>"; };
 		D534AC332226A94A001B249F /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		D534AC372226F743001B249F /* CalculateCalendarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCalendarLogic.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				D534AC332226A94A001B249F /* DateExtension.swift */,
 				D534AC372226F743001B249F /* CalculateCalendarLogic.swift */,
 				D507C9A82175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift */,
+				D52D5BBD2230DDE600B84369 /* InfiniteHarassmentButton.swift */,
 			);
 			path = OtherClass;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				D500D0CD2175C8960016288E /* OViewController.swift in Sources */,
 				D595375E21FDFCE000C27E29 /* Logger.swift in Sources */,
 				D507C9A62175D363001F82D9 /* TImeCardView.swift in Sources */,
+				D52D5BBE2230DDE600B84369 /* InfiniteHarassmentButton.swift in Sources */,
 				D500D05B2175BDAB0016288E /* AppDelegate.swift in Sources */,
 				D507C9A92175DBE5001F82D9 /* CALayer+RuntimeAttribute.swift in Sources */,
 				D507C9AB21762F38001F82D9 /* TimeTableCell.swift in Sources */,

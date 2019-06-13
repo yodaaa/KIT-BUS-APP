@@ -30,12 +30,13 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
 //        self.timetable.layer.shadowOffset = CGSize(width: 5, height: 5)
 //        self.timetable.layer.shadowRadius = 5
 //        self.timetable.layer.shadowColor = UIColor.black.cgColor
-        self.timetable.layer.cornerRadius = 10
+        self.timetable.layer.cornerRadius = 15
         self.timetable.layer.masksToBounds = false
-        self.timetable.layer.shadowOpacity = 0.7
+        self.timetable.layer.shadowOpacity = 0.2
         self.timetable.layer.shadowOffset = CGSize.zero
         self.timetable.layer.shadowRadius = 5
         self.timetable.layer.shadowColor = UIColor.black.cgColor
+        
         
         timecardview.frame = CGRect(x: 5, y: 10, width: Int(screenSize.width - screenRatioWidth*20) , height: Int(screenSize.height * 0.78))
 

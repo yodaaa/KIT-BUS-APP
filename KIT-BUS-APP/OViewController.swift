@@ -26,9 +26,9 @@ class OViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         let pre = DetermineDayOfTheWeekdays().getpre10min()
         
-        self.timetable.layer.cornerRadius = 10
+        self.timetable.layer.cornerRadius = 15
         self.timetable.layer.masksToBounds = false
-        self.timetable.layer.shadowOpacity = 0.7
+        self.timetable.layer.shadowOpacity = 0.2
         self.timetable.layer.shadowOffset = CGSize.zero
         self.timetable.layer.shadowRadius = 5
         self.timetable.layer.shadowColor = UIColor.black.cgColor
@@ -125,6 +125,7 @@ class OViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        InfiniteHarassmentButton().showAlert()
     }
     
     /// 通知のボタンのアクション
