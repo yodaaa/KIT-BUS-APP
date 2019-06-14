@@ -119,7 +119,7 @@ class OViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let arrTimeStr = format.date(from: arrtime[indexPath.row])
         cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
         
-        cell.notifyButton.isHidden = false
+        //cell.notifyButton.isHidden = false
         cell.notifyButton.addTarget(self, action: #selector(notifyButtonAction(_:)), for: UIControlEvents.touchUpInside)
     }
     

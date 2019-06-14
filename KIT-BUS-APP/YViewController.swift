@@ -143,7 +143,7 @@ class YViewController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let arrTimeStr = format.date(from: arrtime[indexPath.row])
         cell.arrivalTimeLabel.text = format.string(from: arrTimeStr!)
         
-        cell.notifyButton.isHidden = false
+        //cell.notifyButton.isHidden = false
         cell.notifyButton.tag = (indexPath.section*100) + indexPath.row
         if format.string(from: deTimeStr!).isEmpty {
             Logger.debugLog("test")
