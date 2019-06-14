@@ -19,29 +19,29 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" restorationIdentifier="busID" text="ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPk-7W-UZ5">
-                        <rect key="frame" x="16" y="13" width="27" height="21"/>
+                        <rect key="frame" x="16" y="11.5" width="27" height="22.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="27" id="4gd-rx-a2o"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="発車時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8u-YS-J43">
-                        <rect key="frame" x="92" y="12.5" width="69.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <rect key="frame" x="92" y="10.5" width="68" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="到着時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDO-43-UbU">
-                        <rect key="frame" x="214.5" y="12.5" width="69.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <rect key="frame" x="216" y="10.5" width="68" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cP-Q3-dcu">
-                        <rect key="frame" x="183.5" y="14" width="8" height="21"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <rect key="frame" x="185.5" y="13.5" width="4" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
